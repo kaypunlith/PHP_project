@@ -1,0 +1,19 @@
+div{
+    box-sizing: border-box;
+}
+h1,h2,h3,p{
+    list-style-type: none;
+}
+.menu-box{
+    background-color: blue;
+}
+.menu ul li{
+    display: inline-block;
+}
+.menu ul li a{
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+    font-size: 22px;
+}

@@ -1,0 +1,351 @@
+body{
+    margin: 0;
+}
+div,h1,h2,h3,p,ul{
+    box-sizing: border-box;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.popup{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.226);
+    z-index: 99;
+}
+.loading{
+    width: 300px;
+    padding: 40px;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: white;
+    border-radius: 4px;
+}
+.loading i{
+    font-size: 25px;
+}
+.bar1{
+    width: 100%;
+    float: left;
+    height: 40px;
+    box-shadow: 1px 1px 5px 0 grey;
+}
+.bar1 .btn-menu{
+    width: 5%;
+    height: 100%;
+    float: left;
+    background-image: url('btn-menu.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 32px 32px;
+    cursor: pointer;
+}
+.bar1 .page-title{
+    width: 80%;
+    height: 100%;
+    float: left;
+    padding-top: 10px;
+    padding-left: 10px;
+    border-left: 1px solid #ccc;
+}
+.bar1 .user-box{
+    width: 15%;
+    height: 100%;
+    float: left;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 20px;
+    border-left: 1px solid #ccc;
+}
+.bar1 .user-box i{
+    float: right;
+    cursor: pointer;
+    
+}
+.left-menu{
+    width: 5%;
+    height: 100%;
+    position: fixed;
+    background-color: #fff;
+    top:41px;
+    box-shadow: 1px 1px 5px 0px #ccc;
+    z-index: 1;
+}
+.left-menu ul li{
+    width: 100%;
+    float: left;
+    position: relative;
+}
+.left-menu ul li a{
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    color: #333;
+    font-size: 18px;
+    padding: 20px;
+    cursor: pointer;
+}
+.left-menu ul li a i{
+    font-size: 34px;
+}
+.left-menu ul li a:hover{
+    background-color: #eee;
+}
+.sub-menu{
+    position: absolute;
+    top: 20px;
+    left: 100%;
+    background-color: white;
+    box-shadow: 1px 1px 5px 0 #ccc;
+    width: 200px;
+    display: none;
+    
+}
+.sub-menu ul li a{
+    display: block;
+    text-align: left;
+    padding: 15px;
+    cursor: pointer;
+}
+.left-menu ul li:hover .sub-menu{
+    display: block;
+}
+.data-container{
+    width: 95%;
+    height: 100%;
+    position: fixed;
+    top: 41px;
+    left: 5%;
+    padding: 15px;
+  
+}
+.container-2{
+    width: 100%;
+    float: left;
+    display: none;
+}
+.btn{
+    padding: 8px 13px;
+    float: left;
+    cursor: pointer;
+    border-radius: 3px;
+}
+.btn:hover{
+    opacity: 0.8;
+}
+.btn-1{
+    background-color: cornflowerblue;
+    color: #fff;
+}
+.btn-2{
+    background-color: #ccc;
+    color: #333;
+}
+.container-2 ul.search-box{
+    background-color: #eee;
+    border-radius: 4px;
+    overflow: hidden;
+    float: left;
+    margin-left: 20px;
+}
+.container-2 ul.search-box li{
+    float: left;
+}
+.container-2 ul.search-box li input{
+    outline: none;
+    border: none;
+    padding: 9px;
+    border: 1px solid #ccc;
+}
+.container-2 ul.search-box li select{
+    outline: none;
+    border: none;
+    padding: 8.3px;
+    width: 200px;
+    border: 1px solid #ccc;
+}
+.container-2 ul.search-box li.btn-search{
+    padding: 7.5px 15px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+}
+.container-2 ul.page-box{
+    float: right;
+}
+.container-2 ul.page-box li{
+    float: left;
+}
+.container-2 ul.page-box li select{
+    background-color: transparent;
+    border: none;
+}
+.container-2 ul.page-box li.limit-box{
+    margin-right: 15px;
+}
+.data-container table.tblData{
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 5px;
+    float: left;
+}
+.data-container table.tblData tr th{
+    background-color: #eee;
+    border: 1px solid #ccc;
+    padding: 8px;
+}
+.data-container table.tblData tr td{
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 8px;
+}
+.data-container table.tblData tr:nth-child(odd) td{
+    background-color: rgb(224, 243, 255);
+}
+.data-container table.tblData tr:hover td{
+    background-color: rgb(221, 221, 207);
+}
+.data-container table.tblData tr td img{
+    width: 50px;
+    height: 50px;
+}
+.frm{
+    width: 550px;
+    margin: auto;
+    overflow: hidden;
+    margin-top: 30px;
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: 1px 1px 5px 0px dimgray;
+}
+.frm .head{
+    width: 100%;
+    height: 35px;
+    float: left;
+    background-color: #eee;
+    border-bottom: 1px solid #ccc;
+    line-height: 35px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.frm .head i{
+    float: right;
+    margin-top: 10px;
+    cursor: pointer;
+    opacity: 0.5;
+}
+.frm .head i:hover{
+    opacity: 1;
+}
+.frm .body{
+    width: 100%;
+    float: left;
+    padding:15px;
+}
+.frm .box1{
+    width: 20%;
+    float: left;
+}
+.frm .box2{
+    width: 77%;
+    float: left;
+    margin-left: 3%;
+}
+.frm textarea{
+    height: 500px;
+}
+label{
+    width: 100%;
+    float: left;
+}
+.frm-control{
+    width: 100%;
+    float: left;
+    padding:10px;
+    border: 1px solid #ccc;
+    outline: none;
+    box-sizing: border-box;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+.img-box{
+    width: 100px;
+    height: 100px;
+    float: left;
+    border: 1px solid #ccc;
+    background-image: url('../img/plachoder.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.img-box #txt-file{
+    width: 100%;
+    height: 100%;
+    float: left;
+    opacity: 0;
+    cursor: pointer;
+}
+.img-box2{
+    width: 100px;
+    height: 100px;
+    float: left;
+    border: 1px solid #ccc;
+    background-image: url('bg-img.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.img-box2 #txt-file{
+    width: 100%;
+    height: 100%;
+    float: left;
+    opacity: 0;
+    cursor: pointer;
+}
+.footer{
+    width: 100%;
+    float: left;
+    padding: 2px;
+    background-color: #eee;
+}
+.btn-save{
+    background-color: cornflowerblue;
+    color: #fff;
+    float: right;
+}
+.none{
+    display: none;
+}
+#tblPermission{
+    width: 100%;
+}
+#tblPermission tr th{
+    background-color: black;
+    color: white;
+    padding: 5px;
+}
+#tblPermission tr td{
+    padding: 5px;
+    border: 1px solid #ccc;
+}
+#tblTest{
+    width: 100%;
+    border-collapse: collapse;
+}
+#tblTest tr th{
+    border: 1px solid #ccc;
+    background-color: #eee;
+    padding: 5px;
+    font-size: 12px;
+}
+#tblTest tr td{
+    border: 1px solid #ccc;
+    background-color: #eee;
+    padding: 5px;
+    font-size: 12px;
+}
